@@ -1,21 +1,9 @@
 #!/bin/bash
-# SW Jan 2019
 # Time: ~12 min. Deploy one master, one public agent, five private agents:
 
 export AWS_DEFAULT_REGION=us-west-2
 eval $(maws li <Your Account>)
 sudo ssh-add ~/.ssh/id_rsa
-
-# List all DC/OS clusters attached to this system
-#  dcos cluster list
-#  sudo dcos cluster list
-
-# Unattach all DC/OS clusters from this system
-#  dcos cluster remove --all
-
-# Backup, Delete existing kube config file
-#  cp ~/.kube/config ~/.kube/config.backup
-#  rm ~/.kube/config
 
 
 # Main.tf configuration confirmation
@@ -42,5 +30,4 @@ sleep 5
 open https://$mIP
 dcos package install dcos-enterprise-cli --yes
 
-date
 echo Prep is complete -- DC/OS is now ready.
