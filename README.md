@@ -103,8 +103,8 @@ The first step is to login into JupyterLab. If we have used the default name and
 The default password with the above settings is `jupyter` and
 ![UI](img/jupyterlab_ui.png)
 
-Once logged in you should be to see the JupyterLab Launcher:
-![JupyterLab Launcher](img/jupyterlab_ui.png).
+Once logged in you should be to see the Terminal launcher:
+![Terminal launcher](img/Terminal.png).
 
 
 ### SparkPi Job
@@ -137,8 +137,12 @@ Once the Spark job has finished you should be able to see output similar to `Pi 
 ### SparkPi with Apache Toree
 
 Let us run the SparkPi example as well directly from a [Apache Toree](https://toree.incubator.apache.org/) notebook.
-So launch a new notebook with an `Apache Toree Scala` Kernel and use the below Scala code to compute Pi once more:
+So launch a new notebook with an `Apache Toree Scala` Kernel: 
 
+![SparkPiToree](img/SparkPi_Toree.png)
+
+
+and use the below Scala code to compute Pi once more:
 
 ``` scala
 val NUM_SAMPLES = 10000000
@@ -152,7 +156,6 @@ val count2 = spark.sparkContext.parallelize(1 to NUM_SAMPLES).map{i =>
 println("Pi is roughly " + 4.0 * count2 / NUM_SAMPLES)
 ```
 
-![SparkPiToree](img/SparkPi_Toree.png)
 
 
 ### [Optional for GPU enabled JupyterLab] Check available GPUs
