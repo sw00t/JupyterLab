@@ -26,6 +26,8 @@ Technologies used in the demo include:
 
 - A [DC/OS 1.12](https://dcos.io/releases/) or higher cluster using the Universal Installer., with 1 Master node, 1 Public Agent node, and at minimum 5 Private Agent nodes.
   - All nodes should meet DC/OS Agent [System Requirements](https://docs.mesosphere.com/1.12/installing/production/system-requirements/). If using AWS, m4.xlarge or m5.xlarge AMIs are acceptable.
+  - main.tf, 00-BuildDCOS.sh, 99-DestroyDCOS.sh files may be used for DC/OS cluster setup. 
+    - NOTE: review and update each file to ensure the correct MAWS account is being used.
 - The [DC/OS CLI](https://docs.mesosphere.com/latest/cli/install/).
 - For GPU support, refer to the [GPU Cluster Provisioning](https://github.com/dcos/examples/tree/master/jupyterlab/1.11#install-jupyterlab-with-gpu-support) section in the README for more details prior to updating your main.tf file.
 
